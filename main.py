@@ -9,7 +9,6 @@ btc_prices.set_index("date", inplace=True)
 btc_prices.sort_index(ascending=True, inplace=True)
 
 # Simplify just to close price for this purpose=
-
 btc_close = btc_prices['adjClose']
 
 # Drop index to use for function
@@ -39,9 +38,6 @@ skew=[]
 kurt=[]
 
 # Set up plotly dashboard page (Aggregated, then days of week)
-
-
-
 fig = make_subplots(
     rows=3, cols=4,
     horizontal_spacing=0.03,

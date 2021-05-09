@@ -5,13 +5,15 @@ import os
 from config import *
 from api_calls import get_daily_prices
 
+
+#TODO: Migrate the below into the function
+
 # Get all cryptos available on API
 response = requests.get(base_url + version + "symbol/available-cryptocurrencies?apikey=" + api_key)
 json = response.json()
 
 # Parse response as json and convert to df for readability
 available_pairs = pd.DataFrame(json)
-print(available_pairs)
 
 failed = 0
 count = 0
